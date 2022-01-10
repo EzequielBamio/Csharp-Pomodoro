@@ -5,23 +5,28 @@ namespace PO_Library
 {
     public class Time
     {
+        public enum EType { Pomodoro, ShortB, LongB }
+
         private int minutes;
         private int seconds;
+        private EType type;
 
         #region Propierties
         public int Minutes { get => minutes; set => minutes = value; }
         public int Seconds { get => seconds; set => seconds = value; }
+        public EType Type { get => type; set => type = value; }
+
         #endregion
 
         #region Builders
-        public Time(int minutes, int seconds)
+        public Time() 
+            : this(0, 0)
+        { }  
+        public Time(int minutes, EType type)
         {
             this.minutes = minutes;
-            this.seconds = seconds;
+            this.type = type;
         }
-        public Time(int minutes)
-           : this(minutes, 0)
-        { }
         #endregion
 
 

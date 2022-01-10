@@ -34,7 +34,6 @@ C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.AssemblyInfoInputs.cache
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.AssemblyInfo.cs
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.csproj.CoreCompileInputs.cache
-C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.csproj.CopyComplete
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.dll
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\ref\PA_Pomodoro.dll
 C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PA_Pomodoro\obj\Debug\net5.0-windows\PA_Pomodoro.pdb
