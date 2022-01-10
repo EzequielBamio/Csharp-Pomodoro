@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PO_Library\\PO_Library.csproj",
+      "projectUniqueName": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PO_Library\\PO_Library.csproj",
       "projectName": "PO_Library",
-      "projectPath": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PO_Library\\PO_Library.csproj",
+      "projectPath": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PO_Library\\PO_Library.csproj",
       "packagesPath": "C:\\Users\\ezequ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PO_Library\\obj\\",
+      "outputPath": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PO_Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

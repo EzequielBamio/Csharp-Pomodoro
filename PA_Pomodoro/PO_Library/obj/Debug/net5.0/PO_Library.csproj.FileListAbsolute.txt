@@ -10,3 +10,15 @@ C:\Users\ezequ\source\repos\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.d
 C:\Users\ezequ\source\repos\PA_Pomodoro\PO_Library\obj\Debug\net5.0\ref\PO_Library.dll
 C:\Users\ezequ\source\repos\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.pdb
 C:\Users\ezequ\source\repos\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.csproj.AssemblyReference.cache
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\bin\Debug\net5.0\PO_Library.deps.json
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\bin\Debug\net5.0\PO_Library.dll
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\bin\Debug\net5.0\ref\PO_Library.dll
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\bin\Debug\net5.0\PO_Library.pdb
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.csproj.AssemblyReference.cache
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.AssemblyInfoInputs.cache
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.AssemblyInfo.cs
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.csproj.CoreCompileInputs.cache
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.dll
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\ref\PO_Library.dll
+C:\Users\ezequ\Desktop\Csharp-Pomodoro\PA_Pomodoro\PO_Library\obj\Debug\net5.0\PO_Library.pdb

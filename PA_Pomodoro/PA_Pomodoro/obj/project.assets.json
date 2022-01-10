@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PA_Pomodoro\\PA_Pomodoro.csproj",
+      "projectUniqueName": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PA_Pomodoro\\PA_Pomodoro.csproj",
       "projectName": "PA_Pomodoro",
-      "projectPath": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PA_Pomodoro\\PA_Pomodoro.csproj",
+      "projectPath": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PA_Pomodoro\\PA_Pomodoro.csproj",
       "packagesPath": "C:\\Users\\ezequ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PA_Pomodoro\\obj\\",
+      "outputPath": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PA_Pomodoro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -60,8 +60,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PO_Library\\PO_Library.csproj": {
-              "projectPath": "C:\\Users\\ezequ\\source\\repos\\PA_Pomodoro\\PO_Library\\PO_Library.csproj"
+            "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PO_Library\\PO_Library.csproj": {
+              "projectPath": "C:\\Users\\ezequ\\Desktop\\Csharp-Pomodoro\\PA_Pomodoro\\PO_Library\\PO_Library.csproj"
             }
           }
         }

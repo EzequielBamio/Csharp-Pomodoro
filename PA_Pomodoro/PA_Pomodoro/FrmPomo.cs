@@ -14,8 +14,8 @@ namespace PA_Pomodoro
     public partial class FrmPomo : Form
     {
         bool isExecute;
-        int seconds;
-        int minutes;
+        Time tPomodoro;
+        Time tBreak;
         public FrmPomo()
         {
             InitializeComponent();
@@ -24,9 +24,9 @@ namespace PA_Pomodoro
 
         private void FrmPomo_Load(object sender, EventArgs e)
         {
-            this.minutes = 25;
-            this.seconds = 00;
-            this.NotifyTime(this.minutes, this.seconds);
+            this.tPomodoro = new Time(25);
+
+            this.NotifyTime(this.tPomodoro.Minutes, this.tPomodoro.Seconds);
 
         }
 
@@ -64,15 +64,20 @@ namespace PA_Pomodoro
 
         private void tTime_Tick(object sender, EventArgs e)
         {
-            this.seconds--;
+            this.Start(this.tPomodoro);
+        }
 
-            if (this.seconds < 0)
+        private void Start(Time time) 
+        {
+            time.Seconds--;
+
+            if (time.Seconds < 0)
             {
-                this.minutes--;
-                this.seconds = 59;
+                time.Minutes--;
+                time.Seconds = 59;
 
             }
-            this.NotifyTime(this.minutes, this.seconds);
+            this.NotifyTime(time.Minutes, time.Seconds);
             Thread.Sleep(1000);
         }
     }
