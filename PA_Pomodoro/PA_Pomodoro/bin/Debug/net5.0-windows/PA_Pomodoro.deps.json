@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PA_Pomodoro/1.0.0": {
+        "dependencies": {
+          "PO_Library": "1.0.0"
+        },
+        "runtime": {
+          "PA_Pomodoro.dll": {}
+        }
+      },
+      "PO_Library/1.0.0": {
+        "runtime": {
+          "PO_Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PA_Pomodoro/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PO_Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
