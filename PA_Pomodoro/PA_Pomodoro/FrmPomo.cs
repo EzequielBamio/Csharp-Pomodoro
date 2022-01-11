@@ -14,7 +14,7 @@ namespace PA_Pomodoro
 {
     public partial class FrmPomo : Form
     {
-        const int MINUTES_SHORT_BREAK = 1;
+        const int MINUTES_SHORT_BREAK = 5;
         const int MINUTES_LONG_BREAK = 15;
         const int MINUTES_POMODORO = 25;
         int countShortBreak = 0;

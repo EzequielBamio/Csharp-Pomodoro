@@ -30,6 +30,7 @@ namespace PA_Pomodoro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPomo));
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.tTime = new System.Windows.Forms.Timer(this.components);
@@ -167,6 +168,7 @@ namespace PA_Pomodoro
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnShoBreak);
             this.Controls.Add(this.btnPomodoro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "FrmPomo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
