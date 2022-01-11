@@ -9,30 +9,28 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PO_Library;
+using System.Media;
 namespace PA_Pomodoro
 {
     public partial class FrmPomo : Form
     {
-        const int MINUTES_POMODORO = 25;
         const int MINUTES_SHORT_BREAK = 1;
         const int MINUTES_LONG_BREAK = 15;
-        int countPomodoro = 0;
+        const int MINUTES_POMODORO = 25;
         int countShortBreak = 0;
         int countLongBreak = 0;
-
+        int countPomodoro = 0;
         bool isExecute;
+        SoundPlayer alarm;
         Time time;
+
         public FrmPomo()
         {
             InitializeComponent();
+            this.alarm = new SoundPlayer();
+            this.alarm.SoundLocation = Environment.CurrentDirectory + "/alarm.wav";
+            this.GenerateTime(Time.EType.Pomodoro);
             this.isExecute = false;
-        }
-
-        private void FrmPomo_Load(object sender, EventArgs e)
-        {
-            this.time = new Time();
-
-
         }
 
         private void NotifyTime(int min, int seg) 
@@ -42,11 +40,11 @@ namespace PA_Pomodoro
 
             if (seg < 10) 
             {
-                sSeg = Convert.ToString("0" + seg);
+                sSeg = $"0{ sSeg }";
             }
             if (min < 10)
             {
-                sMin = Convert.ToString("0" + min);
+                sMin = $"0{ sMin }";
             }
             this.lblTime.Text = $"{sMin}:{sSeg}";
             
@@ -55,7 +53,8 @@ namespace PA_Pomodoro
         {
             if (!this.isExecute)
             {
-                tTime.Start();
+                this.tTime.Start();
+                this.OutButton(time.Type);
                 this.btnStart.Text = "Stop";
                 this.isExecute = true;
             }
@@ -74,8 +73,10 @@ namespace PA_Pomodoro
         {
             if (time.Minutes == 0 && time.Seconds == 0)
             {
-                this.tTime_Cancel();
+                this.alarm.PlayLooping();
                 this.CountTime(time.Type);
+                Thread.Sleep(3000);
+                this.tTime_Reset();
             }
             else
             {
@@ -94,39 +95,71 @@ namespace PA_Pomodoro
         private void tTime_Cancel() 
         {
             this.tTime.Stop();
-            this.btnStart.Text = "Start";
+            this.OnButton();
             this.isExecute = false;
+            this.btnStart.Text = "Start";
+            this.alarm.Stop();
+
         }
 
-        private void btnPomodoro_Click(object sender, EventArgs e)
+        private void tTime_Reset()
         {
-            this.time = new Time(MINUTES_POMODORO, Time.EType.Pomodoro);
-            this.ColourPomodoro();
+            this.tTime_Cancel();
+            this.GenerateTime(time.Type);
+        }
+
+        private void OutButton(Time.EType type)
+        {
+            switch (type)
+            {
+                case Time.EType.Pomodoro:
+                    this.btnLonBreak.Enabled = false;
+                    this.btnShoBreak.Enabled = false;
+                    break;
+                case Time.EType.ShortB:
+                    this.btnLonBreak.Enabled = false;
+                    this.btnPomodoro.Enabled = false;
+                    break;
+                case Time.EType.LongB:
+                    this.btnPomodoro.Enabled = false;
+                    this.btnShoBreak.Enabled = false;
+                    break;
+            }
+        }
+
+        private void OnButton()
+        {
+            this.btnPomodoro.Enabled = true;
+            this.btnLonBreak.Enabled = true;
+            this.btnShoBreak.Enabled = true;
+                    
+        }
+
+        private void GenerateTime(Time.EType type)
+        {
+            switch (type)
+            {
+                case Time.EType.Pomodoro:
+                    this.time = new Time(MINUTES_POMODORO, Time.EType.Pomodoro);
+                    this.ColourPomodoro();
+                    break;
+                case Time.EType.ShortB:
+                    this.time = new Time(MINUTES_SHORT_BREAK, Time.EType.ShortB);
+                    this.ColourBreak();
+                    break;
+                case Time.EType.LongB:
+                    this.time = new Time(MINUTES_LONG_BREAK, Time.EType.LongB);
+                    this.ColourBreak();
+                    break;
+            }
             this.tTime_Cancel();
             this.NotifyTime(this.time.Minutes, this.time.Seconds);
-            
-        }
-
-        private void btnShoBreak_Click(object sender, EventArgs e)
-        {
-            this.time = new Time(MINUTES_SHORT_BREAK, Time.EType.ShortB);
-            this.ColourBreak();
-            this.tTime_Cancel();
-            this.NotifyTime(this.time.Minutes, this.time.Seconds);
 
         }
 
-        private void btnLonBreak_Click(object sender, EventArgs e)
+        private void CountTime(Time.EType type)
         {
-            this.time = new Time(MINUTES_LONG_BREAK, Time.EType.LongB);
-            this.ColourBreak();
-            this.tTime_Cancel();
-            this.NotifyTime(this.time.Minutes, this.time.Seconds);
-        }
-
-        private void CountTime(Time.EType type) 
-        {
-            switch (type) 
+            switch (type)
             {
                 case Time.EType.Pomodoro:
                     this.countPomodoro++;
@@ -149,15 +182,30 @@ namespace PA_Pomodoro
             this.lblLonBreak.Text = this.countLongBreak.ToString();
         }
 
-        private void ColourBreak() 
+        private void btnPomodoro_Click(object sender, EventArgs e)
+        {
+            this.GenerateTime(Time.EType.Pomodoro);
+        }
+
+        private void btnShoBreak_Click(object sender, EventArgs e)
+        {
+            this.GenerateTime(Time.EType.ShortB);
+        }
+
+        private void btnLonBreak_Click(object sender, EventArgs e)
+        {
+            this.GenerateTime(Time.EType.LongB);
+        }
+
+        private void ColourBreak()
         {
             this.BackColor = Color.FromArgb(94, 178, 100); //176; 60; 52
             this.btnShoBreak.ForeColor = Color.FromArgb(94, 178, 100);
             this.btnPomodoro.ForeColor = Color.FromArgb(94, 178, 100);
             this.btnLonBreak.ForeColor = Color.FromArgb(94, 178, 100);
             this.btnStart.ForeColor = Color.FromArgb(94, 178, 100);
-            this.btnReset.ForeColor = Color.FromArgb(94, 178, 100);
         }
+
         private void ColourPomodoro()
         {
             this.BackColor = Color.FromArgb(176, 60, 52);
@@ -165,14 +213,7 @@ namespace PA_Pomodoro
             this.btnPomodoro.ForeColor = Color.FromArgb(176, 60, 52);
             this.btnShoBreak.ForeColor = Color.FromArgb(176, 60, 52);
             this.btnStart.ForeColor = Color.FromArgb(176, 60, 52);
-            this.btnReset.ForeColor = Color.FromArgb(176, 60, 52);
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            this.tTime_Cancel();
-            this.btnPomodoro_Click(sender, e);
-            this.NotifyTime(this.time.Minutes, this.time.Seconds);
-        }
     }
 }

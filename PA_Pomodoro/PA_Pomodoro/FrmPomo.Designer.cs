@@ -33,25 +33,23 @@ namespace PA_Pomodoro
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.tTime = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnPomodoro = new System.Windows.Forms.Button();
             this.btnShoBreak = new System.Windows.Forms.Button();
             this.btnLonBreak = new System.Windows.Forms.Button();
             this.lblPomodoro = new System.Windows.Forms.Label();
             this.lblShoBreak = new System.Windows.Forms.Label();
             this.lblLonBreak = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.White;
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
-            this.btnStart.Location = new System.Drawing.Point(12, 294);
+            this.btnStart.Location = new System.Drawing.Point(136, 329);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(156, 58);
             this.btnStart.TabIndex = 3;
@@ -64,7 +62,7 @@ namespace PA_Pomodoro
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Comic Sans MS", 62F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(46, 19);
+            this.lblTime.Location = new System.Drawing.Point(70, 138);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(289, 115);
             this.lblTime.TabIndex = 4;
@@ -74,19 +72,12 @@ namespace PA_Pomodoro
             // 
             this.tTime.Tick += new System.EventHandler(this.tTime_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Location = new System.Drawing.Point(12, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 156);
-            this.panel2.TabIndex = 5;
-            // 
             // btnPomodoro
             // 
             this.btnPomodoro.BackColor = System.Drawing.Color.White;
+            this.btnPomodoro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPomodoro.FlatAppearance.BorderSize = 0;
-            this.btnPomodoro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPomodoro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPomodoro.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPomodoro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
             this.btnPomodoro.Location = new System.Drawing.Point(12, 64);
@@ -100,11 +91,12 @@ namespace PA_Pomodoro
             // btnShoBreak
             // 
             this.btnShoBreak.BackColor = System.Drawing.Color.White;
+            this.btnShoBreak.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShoBreak.FlatAppearance.BorderSize = 0;
-            this.btnShoBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShoBreak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShoBreak.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnShoBreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
-            this.btnShoBreak.Location = new System.Drawing.Point(142, 64);
+            this.btnShoBreak.Location = new System.Drawing.Point(152, 64);
             this.btnShoBreak.Name = "btnShoBreak";
             this.btnShoBreak.Size = new System.Drawing.Size(124, 32);
             this.btnShoBreak.TabIndex = 6;
@@ -115,11 +107,12 @@ namespace PA_Pomodoro
             // btnLonBreak
             // 
             this.btnLonBreak.BackColor = System.Drawing.Color.White;
+            this.btnLonBreak.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLonBreak.FlatAppearance.BorderSize = 0;
-            this.btnLonBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLonBreak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLonBreak.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLonBreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
-            this.btnLonBreak.Location = new System.Drawing.Point(272, 64);
+            this.btnLonBreak.Location = new System.Drawing.Point(294, 64);
             this.btnLonBreak.Name = "btnLonBreak";
             this.btnLonBreak.Size = new System.Drawing.Size(124, 32);
             this.btnLonBreak.TabIndex = 7;
@@ -143,7 +136,7 @@ namespace PA_Pomodoro
             this.lblShoBreak.AutoSize = true;
             this.lblShoBreak.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblShoBreak.ForeColor = System.Drawing.Color.White;
-            this.lblShoBreak.Location = new System.Drawing.Point(194, 38);
+            this.lblShoBreak.Location = new System.Drawing.Point(204, 38);
             this.lblShoBreak.Name = "lblShoBreak";
             this.lblShoBreak.Size = new System.Drawing.Size(20, 23);
             this.lblShoBreak.TabIndex = 9;
@@ -154,34 +147,19 @@ namespace PA_Pomodoro
             this.lblLonBreak.AutoSize = true;
             this.lblLonBreak.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblLonBreak.ForeColor = System.Drawing.Color.White;
-            this.lblLonBreak.Location = new System.Drawing.Point(324, 38);
+            this.lblLonBreak.Location = new System.Drawing.Point(346, 38);
             this.lblLonBreak.Name = "lblLonBreak";
             this.lblLonBreak.Size = new System.Drawing.Size(20, 23);
             this.lblLonBreak.TabIndex = 10;
             this.lblLonBreak.Text = "0";
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.White;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
-            this.btnReset.Location = new System.Drawing.Point(240, 294);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(156, 58);
-            this.btnReset.TabIndex = 11;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // FrmPomo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(60)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(706, 461);
-            this.Controls.Add(this.btnReset);
+            this.ClientSize = new System.Drawing.Size(430, 460);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblLonBreak);
             this.Controls.Add(this.lblShoBreak);
             this.Controls.Add(this.lblPomodoro);
@@ -189,13 +167,10 @@ namespace PA_Pomodoro
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnShoBreak);
             this.Controls.Add(this.btnPomodoro);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimizeBox = false;
             this.Name = "FrmPomo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pomodoro";
-            this.Load += new System.EventHandler(this.FrmPomo_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,14 +182,12 @@ namespace PA_Pomodoro
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer tTime;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnPomodoro;
         private System.Windows.Forms.Button btnShoBreak;
         private System.Windows.Forms.Button btnLonBreak;
         private System.Windows.Forms.Label lblPomodoro;
         private System.Windows.Forms.Label lblShoBreak;
         private System.Windows.Forms.Label lblLonBreak;
-        private System.Windows.Forms.Button btnReset;
     }
 }
 
